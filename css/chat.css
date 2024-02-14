@@ -1,0 +1,134 @@
+.messagebox{
+    width: 80%;
+    height: 100vh;
+    padding:110px 10px 10px 10px ;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: var(--lightbg);
+}
+.messagebox .chat{
+    width: 100%;
+    background-color: var(--lightbg);
+    height: 90vh;
+     display: flex;
+    justify-content: flex-start;
+    flex-direction: column; 
+    padding: 10px;
+    gap: 1rem;
+    overflow-y: scroll;
+    
+}
+.messagebox .chat span{
+    user-select: text;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--textColor);
+    display: inline-block;
+}
+.messagebox .chat .response{
+    align-self:flex-start ;
+    text-align: left;
+
+    .loader{
+        width: 50px;
+        height: 50px;
+        border-bottom: 2px solid var(--secColor);
+        border-radius: 50%;
+        animation: loader 1s linear infinite;
+    }
+}
+.messagebox .chat .send{
+    align-self: flex-end;
+    text-align: right;
+}
+.messagebox .chat .response span{
+    background-color: var(--bgcolor);
+}
+.messagebox .chat .send span{
+    background-color: var(--secColor);
+}
+.messagebox .sendbox{
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--lightbg);
+    width: 100%;
+    border-radius:  0  0 20px 20px;
+    
+}
+.messagebox .sendbox .msg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--bgcolor);
+    width: 40%;
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+.messagebox .sendbox .msg input{
+font-size: 1.3rem;
+background-color: var(--bgcolor);
+font-weight: 500;
+color: var(--textColor);
+border: none;
+width: calc(90% - 1rem);
+}
+.messagebox .sendbox .msg input:focus{
+    outline-width: 0;
+}
+.messagebox .sendbox .msg i{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    padding: 10px;
+    color: var(--textColor);
+    background-color: var(--secColor);
+    background-size: 2rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: var(--trans);
+}
+.messagebox .sendbox .msg i:hover{
+    background-color: var(--bgcolor);
+}
+
+@media screen and (max-width:999px) {
+    .messagebox .sendbox .msg {
+        width: 100%;
+    }
+    .messagebox .sendbox .msg i {
+        width: 10%;
+        padding: 10px;
+    }
+    
+}
+@media screen and (max-width:600px){
+    .messagebox .chat {
+        gap: 2rem;
+    }
+    .messagebox .sendbox .msg {
+        width: 100%;
+    }
+    .messagebox .sendbox .msg input {
+        font-size: .9rem;
+    }
+    .messagebox .sendbox .msg i {
+        width: 15%;
+    }
+}
+@keyframes loader {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

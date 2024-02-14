@@ -1,0 +1,162 @@
+ header{
+    width: 100%;
+display: flex;
+align-items: center;
+justify-content:space-between;
+ padding: 20px 5%;
+ position: fixed;
+ background-color: var(--bgcolor);
+
+}
+ header .logo{
+    display: flex;
+align-items: center;
+justify-content:flex-start;
+gap: 2rem;
+}
+header .logo h1{
+    font-size: 2rem;
+    font-weight:700;
+    color: var(--secColor);
+    border: 2px solid var(--secColor);
+    padding: 8px;
+    border-radius: 50%;
+    text-transform: uppercase;
+}
+header .logo h2{
+    font-size: 2rem;
+    font-weight:700;
+    color: var(--secColor);
+    text-transform: capitalize;
+}
+header a{
+    color: var(--textColor);
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var( --lightbg);
+    padding: 10px;
+    border-radius: 20px;
+    transition: var(--trans);
+    text-transform: capitalize;
+}
+header a:hover,header .logo h1:hover{
+ color: var(--textColor);
+ background-color: var(--secColor);
+}
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem;
+    gap: 1rem;
+}
+.hero .left{
+ width: calc(50% - .5rem);
+ display: flex;
+ align-items: flex-start ;
+ justify-content: flex-start;
+ flex-direction: column;
+ gap: .5rem;
+}
+.hero .left h1{
+    text-transform: capitalize;
+    color: var(--textColor);
+    font-size: 4rem;
+    font-weight: 900;
+}
+.hero .left p{
+    color: var(--textColorDark);
+    margin: 10px 0 10px 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.hero .left a{
+    color: var(--textColor);
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var( --secColor);
+    padding: 10px;
+    border-radius: 20px;
+ text-transform: capitalize;
+}
+.hero .right{
+    width: calc(50% - .5rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+.hero .right img{
+    height: 65vh;
+    filter: drop-shadow(1px 1px 200px var( --secColor));
+}
+@media screen and (max-width:999px){
+    .hero {
+        padding:2rem ;
+    }
+    .hero .left h1 {
+        font-size: 2rem;
+        font-weight: 1000;
+    }
+    .hero .left p {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+    .hero .left a {
+        font-size: .8rem;
+    }
+    .hero .right{
+        padding: 1rem;
+
+    }
+    .hero .right img{
+        height: 55vh;
+    }
+}
+@media screen and (max-width:600px){
+    header .logo {
+        gap: 1rem;
+    }
+    header .logo h1 {
+        font-size: 1rem;
+        padding: 5px;
+    }
+    header .logo h2 {
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    header a {
+        font-size: .8rem;
+        padding: 8px;;
+    }
+    .hero {
+        padding: .5rem;
+        flex-direction: column;
+        padding: 6rem 1rem 0 1rem;
+    }
+    .hero .left {
+        width: 100%;
+        padding: 1rem;
+    }
+    .hero .left h1 {
+        font-size: 1.5rem;
+        font-weight: 900;
+    }
+    .hero .left p {
+        font-size: 1rem;
+    }
+
+.hero .left a {
+    font-size: .7rem;
+}
+.hero .right {
+    width: 100%;
+    padding: 1.5rem;
+}
+.hero .right img{
+    height: 50vh;
+    
+}
+}
